@@ -3,8 +3,10 @@
 @tailwind utilities;
 
 html {
-    overflow: scroll;
     scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
 
 @font-face {
@@ -19,6 +21,8 @@ html {
 
 body {
     font-family: Roboto;
+    padding: 0;
+    margin: 0;
 }
 
 :root {
@@ -140,16 +144,24 @@ body {
     }
 }
 
-@media screen  and (max-width:1000px) {
+@media (max-width:1000px) {
+    #hero .circle {
+        right: 150px;
+    }
+
+    #hero .text {
+        margin-right: 200px;
+    }
+
     .hamburger::before, .hamburger::after, .hamburger input {
         overflow: hidden;
         display: none;
     }
 }
 
-@media screen and (max-width:830px) {
+@media (max-width:830px) {
     #hero {
-        min-height: 50vh;
+        min-height: 100vh;
     }
 
     #hero .text {
@@ -188,66 +200,84 @@ body {
     }
 }
 
-@media screen and (max-width:450px) {
+@media screen and (max-width: 790px) {
+    #skills h1 {
+        margin-right: 300px;
+    }
+}
+
+@media (max-width:450px) {
 
     #hero {
         display: flex;
         flex-direction: column;
         align-items: center;
         min-height: 80vh;
+        min-width: 100%;
     }
 
     #hero .text {
         width: 100%;
-        margin-top: 460px;
+        margin-top: 320px;
         right: 0;
         text-align: center;
     }
 
     #hero h1 {
-        margin-left: 80px;
+        margin-right: 20px;
+        font-size: 1rem;
+        margin-top: 0;
     }
 
     #hero h3 {
-        margin-left: 80px;
+        font-size: .7rem;
+        margin-right: 20px;
     }
 
     #hero .image .circle {
         top: 150px;
         margin-left: 30px;
-        clip-path: none;
+        width: 150px;
+        height: 150px;
     }
 
     #hero .social {
-        margin-left: 170px;
+        margin-left: 130px;
     }
 
     #hero .underline {
-        margin-left: 170px;
+        margin-left: 130px;
         border-radius: 9999px;
+        height: 4px;
     }
 
     #about {
         width: 100%;
-        margin-left: 40px;
+        margin-left: 10px;
     }
 
     #about h1 {
+        font-size: 1.5rem;
         text-align: center;
     }
 
     #about p {
         text-align: center;
+        font-size: .5rem;
+        margin-right: 20px;
     }
 
     #skills h1{
-        margin-right: 130px;
+        font-size: 1.5rem;
+        padding-right: 40px;
     }
 
-    #skills .skill {
-        margin-right: 80px;
-        margin-top: 10px;
-        margin-bottom: 10px;
+    #skills .container {
+        margin-left: 0;
+    }
+
+    #skills .container .skill {
+        margin-right: 120px;
     }
     
 
@@ -257,13 +287,25 @@ body {
 
     #project h1 {
         text-align: center;
-        margin-left: 110px;
         margin-top: 50px;
+        font-size: 1.5rem;
+        margin-right: 20px;
     }
 
     #project .boxes {
-        margin-left: 120px;
         text-align: center;
+        margin-left: 180px;
+    }
+
+    #project .box {
+        width: 200px;
+        height: 120px;
+        margin-right: 200px;
+    }
+
+    #project .made {
+        margin-right: 200px;
+        font-size: .8rem;
     }
 
     .hamburger::before, .hamburger::after, .hamburger input {
@@ -281,15 +323,16 @@ body {
         padding: 0.5rem 1rem;
         translate: 200%;
         padding-top: calc(val(--hamburger-height) + val(--hamburger-margin) + 1rem);
-        max-width: 20rem;
-        min-width: 20rem;
+        /* max-width: 20rem;
+        min-width: 20rem; */
+        width: 100%;
         height: 100vh;
         color: black;
         display: flex;
         flex-direction: column;
         align-items: start;
         justify-content: center;
-        background-color: yellow;
+        background-color: darkgrey;
     }
 
     .links .sidebar .link-container1 {
@@ -330,9 +373,13 @@ body {
     }
 }
 
-@media screen  and (max-width:380px) {
+@media (max-width:380px) {  
+    #hero {
+        width: 100%;
+    }
+
     #skills h1{
-        margin-right: 110px;
+        margin-right: 180px;
     }
 
     #skills .skill {

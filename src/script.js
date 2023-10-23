@@ -1,13 +1,13 @@
 
 function toggleDarkMode() {
-    const current = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
-    const body = document.querySelector('html').classList;
+    // const current = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+    const html = document.querySelector('html');
     if (localStorage.theme === 'dark') {
-        body.remove('dark');
+        html.classList.remove('dark');
         localStorage.removeItem('theme');
     } else {
-        body.add('dark');
+        html.classList.add('dark');
         localStorage.setItem('theme', 'dark');
     }
-    root.classList.add('dark-transition');
+    // root.classList.add('dark-transition');
 }
