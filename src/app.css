@@ -200,12 +200,6 @@ body {
     }
 }
 
-@media screen and (max-width: 790px) {
-    #skills h1 {
-        margin-right: 300px;
-    }
-}
-
 @media (max-width:450px) {
 
     #hero {
@@ -224,29 +218,29 @@ body {
     }
 
     #hero h1 {
-        margin-right: 20px;
+        margin-left: 170px;
         font-size: 1rem;
         margin-top: 0;
     }
 
     #hero h3 {
         font-size: .7rem;
-        margin-right: 20px;
+        margin-left: 170px;
     }
 
     #hero .image .circle {
         top: 150px;
-        margin-left: 30px;
+        right: 125px;
         width: 150px;
         height: 150px;
     }
 
     #hero .social {
-        margin-left: 130px;
+        margin-left: 230px;
     }
 
     #hero .underline {
-        margin-left: 130px;
+        margin-left: 230px;
         border-radius: 9999px;
         height: 4px;
     }
@@ -259,6 +253,7 @@ body {
     #about h1 {
         font-size: 1.5rem;
         text-align: center;
+        margin-left: 0px;
     }
 
     #about p {
@@ -374,17 +369,37 @@ body {
 }
 
 @media (max-width:380px) {  
-    #hero {
-        width: 100%;
-    }
-
     #skills h1{
-        margin-right: 180px;
+        margin-right: 75px;
     }
 
-    #skills .skill {
-        margin-right: 60px;
+    #skills .container .skill {
         margin-top: 10px;
         margin-bottom: 10px;
+        margin-right: 73px;
+    }
+
+    #hero .image .circle {
+        right: 70px;
+    }
+
+    #hero .social {
+        margin-left: 185px;
+    }
+
+    #hero .underline {
+        margin-left: 185px;
+    }
+
+    #about h1 {
+        margin-left: -9px;
+    }
+
+    #project h1 {
+        margin-left: 45px;
+    }
+
+    #project .made {
+        margin-left: 43px;
     }
 }
