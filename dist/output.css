@@ -635,9 +635,9 @@ video {
           margin-inline-start: 1.25rem;
 }
 
-.ms-80 {
-  -webkit-margin-start: 20rem;
-          margin-inline-start: 20rem;
+.ms-72 {
+  -webkit-margin-start: 18rem;
+          margin-inline-start: 18rem;
 }
 
 .mt-12 {
@@ -696,8 +696,8 @@ video {
   height: 14rem;
 }
 
-.h-72 {
-  height: 18rem;
+.h-80 {
+  height: 20rem;
 }
 
 .min-h-screen {
@@ -752,6 +752,10 @@ video {
   overflow-x: hidden;
 }
 
+.rounded-full {
+  border-radius: 9999px;
+}
+
 .rounded-e-full {
   border-start-end-radius: 9999px;
   border-end-end-radius: 9999px;
@@ -773,11 +777,6 @@ video {
 
 .bg-cover {
   background-size: cover;
-}
-
-.object-cover {
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
 .text-center {
@@ -1053,21 +1052,20 @@ body {
 
   #hero .text {
     width: 100%;
-    right: 0;
     text-align: center;
     margin-top: 5px;
     margin-right: 200px;
   }
 
   #hero h1 {
-    margin-left: 170px;
-    font-size: 1rem;
+    margin-left: 195px;
+    font-size: 1.5rem;
     margin-top: 0;
   }
 
   #hero h3 {
-    font-size: .7rem;
-    margin-left: 170px;
+    font-size: 1rem;
+    margin-left: 195px;
   }
 
   #hero .image .circle {
@@ -1077,30 +1075,28 @@ body {
   }
 
   #hero .social {
-    margin-left: 230px;
+    margin-left: 240px;
   }
 
   #hero .underline {
-    margin-left: 230px;
+    margin-left: 240px;
     border-radius: 9999px;
     height: 4px;
   }
 
   #about {
     width: 100%;
-    margin-right: 10px;
   }
 
   #about h1 {
     font-size: 1.5rem;
     text-align: center;
-    margin-right: 20px;
   }
 
   #about p {
     text-align: center;
     font-size: .5rem;
-    margin-right: 20px;
+    margin-right: 40px;
   }
 
   #skills {
@@ -1108,16 +1104,19 @@ body {
   }
 
   #skills h1 {
+    display: flex;
+    justify-content: center;
     font-size: 1.5rem;
-    text-align: center;
   }
 
   #skills .container {
     margin-left: 0;
+    justify-content: center;
   }
 
   #skills .container .skill {
-    margin-left: 50px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   #hero .text {
