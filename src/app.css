@@ -217,7 +217,7 @@ body {
 
     #hero .image{
         width: 100%;
-        margin-top: 50px;
+        /* margin-top: 50px; */
     }
     #hero .image .circle {
         /* width: 220px; */
@@ -365,7 +365,7 @@ body {
     }
 
     #hero .image img {
-        margin-top: 80px;
+        /* margin-top: 80px; */
         width: 150px;
         height: 150px;
     }
