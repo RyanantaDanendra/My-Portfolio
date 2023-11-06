@@ -1007,10 +1007,6 @@ body {
 }
 
 @media (max-width:1000px) {
-  #hero .image .circle {
-    /* margin-left: 100px; */
-  }
-
   .hamburger::before, .hamburger::after, .hamburger input {
     overflow: hidden;
     display: none;
@@ -1018,15 +1014,6 @@ body {
 }
 
 @media (max-width:830px) {
-  #hero .text {
-    /* margin-left: 100px; */
-  }
-
-  /* #hero.image img {
-        margin-bottom: 100px;
-        margin-right: 20px;
-    } */
-
   #skills {
     min-height: 50vh;
     width: 100%;
@@ -1067,7 +1054,7 @@ body {
 
   #hero h1 {
     /* margin-left: 195px; */
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 
   #hero h3 {
@@ -1078,7 +1065,10 @@ body {
 
   #hero .image{
     width: 100%;
-    /* margin-top: 50px; */
+  }
+
+  #hero .image img {
+    margin-top: 180px;
   }
 
   #hero .social {
@@ -1095,6 +1085,8 @@ body {
 
   #about {
     width: 100%;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 
   #about h1 {
@@ -1103,7 +1095,7 @@ body {
   }
 
   #about p {
-    text-align: center;
+    text-align: justify;
     font-size: 1rem;
   }
 
@@ -1112,7 +1104,7 @@ body {
   }
 
   #skills h1 {
-    font-size: 2rem;
+    font-size:2rem;
     text-align: center;
   }
 
@@ -1131,10 +1123,6 @@ body {
     margin-top: 50px;
     font-size: 1.5rem;
     /* margin-right: 20px; */
-  }
-
-  #project .boxes {
-    /* margin-left: 180px; */
   }
 
   #project .box {
@@ -1165,7 +1153,7 @@ body {
     padding-top: calc(val(--hamburger-height) + val(--hamburger-margin) + 1rem);
     /* max-width: 20rem;
         min-width: 20rem; */
-    width: 100%;
+    width: 300px;
     height: 100vh;
     color: black;
     display: flex;
