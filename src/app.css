@@ -15,13 +15,13 @@ html {
 }   
 
 @font-face {
-    font-family: Roboto-light;
+    font-family: poppins;
     src: url('../src/assets/Roboto-Light.ttf');
 }   
 
 body {
-    font-family: Roboto;
     padding: 0;
+    font-family: poppins;
     margin: 0;
 }
 
@@ -42,6 +42,7 @@ body {
     transform-origin: left center;
     border-radius: 9999px;
     transition: opacity var(--animation-timing), width var(--animation-timing);
+    display: none;
 }
 
 .hamburger {
@@ -91,29 +92,16 @@ body {
 
 #hero .text h1 {
     animation: Slide 1.5s ease-out;
-    font-family: Roboto;
+    font-family: poppins;
 }
 
 #hero .text h3 {
     animation: Slide 2s ease-out;
-    font-family: Roboto-light;
+    font-family: poppins;
 }
 
 #hero .image img {
     animation: image 2s ease-out;
-}
-
-#about h1 {
-    animation: Slide 2s ease-out linear both;
-    animation-timeline: view();
-}
-
-#about p {
-    font-family: Roboto-light;
-}
-
-#project .boxes p {
-    font-family: Roboto-light;
 }
 
 @keyframes widthChange {
@@ -174,6 +162,21 @@ body {
         overflow: hidden;
         display: none;
     }
+
+    .wrap {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .contacts {
+        margin-top: 50px;
+    }
+
+    .svg {
+        flex-direction: column;
+        gap: 10px;
+    }
 }
 
 @media (max-width:660px) {
@@ -182,6 +185,7 @@ body {
         flex-direction: column;
         align-items: center;
         min-width: 100%;
+        padding-bottom: 100px;
     }
 
     #hero .text {
@@ -196,9 +200,12 @@ body {
         font-size: 2.5rem;
     }
 
-    #hero h3 {
-        font-size: 1.5rem;
+    #hero h4 {
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 1rem;
         margin: 0 auto;
+        margin-top: 50px;
         /* margin-left: 195px; */
     }
 
@@ -210,16 +217,8 @@ body {
         margin-top: 180px;
     }
 
-    #hero .social {
+    #hero .button {
         justify-content: center;
-        /* margin-left: 240px; */
-    }
-
-    #hero .underline {
-        margin: 8px auto;
-        /* margin-left: 240px; */
-        border-radius: 9999px;
-        height: 4px;
     }
 
     #about {
@@ -287,23 +286,23 @@ body {
 
     .links .sidebar{
         transition: translate var(--animation-timing);
-        padding: 0.5rem 1rem;
+        padding: 0.5rem;
         translate: 200%;
-        padding-top: calc(val(--hamburger-height) + val(--hamburger-margin) + 1rem);
         /* max-width: 20rem;
         min-width: 20rem; */
         width: 300px;
         height: 100vh;
-        color: black;
+        color: white;
         display: flex;
         flex-direction: column;
         align-items: start;
         justify-content: center;
-        background-color: darkgrey;
+        background-color: black;
+        position: absolute;
+        top: 0;
     }
 
     .links .sidebar .link-container1 {
-        margin-top: 250px;
         font-size: 2rem;
         width: 100%;
     }
@@ -313,8 +312,8 @@ body {
     }
 
     .links .sidebar .link-container1:hover {
-        background-color: black;
-        color: white;
+        background-color: white;
+        color: black;
         animation-duration: 2000ms;
         animation-timing-function: ease-out;
     }
@@ -333,10 +332,6 @@ body {
     .hamburger:has(input:checked) + .sidebar {
         translate: 0;
         margin: 0;
-    }
-
-    footer {
-        left: 90px;
     }
 }
 
