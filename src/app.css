@@ -192,21 +192,26 @@ body {
         width: 100%;
         text-align: center;
         margin-top: 5px;
+        padding-left: 20px;
+        padding-right: 20px;
         /* margin-right: 200px; */
     }
 
     #hero h1 {
         /* margin-left: 195px; */
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
     #hero h4 {
-        padding-left: 10px;
-        padding-right: 10px;
-        font-size: 1rem;
-        margin: 0 auto;
+        font-size: .9rem;
         margin-top: 50px;
         /* margin-left: 195px; */
+    }
+
+    .text .button a {
+        padding-left: 3px;
+        padding-right: 2px;
+        font-size: .8rem;
     }
 
     #hero .image{
@@ -237,41 +242,29 @@ body {
         font-size: 1rem;
     }
 
-    #skills {
-        width: 100%;
+    #about h2 {
+        padding-left: 0px;
+        padding-right: 0px;
     }
 
-    #skills h1 {
-        font-size:2rem;
-        text-align: center;
+    
+    #about h3 {
+        padding-left: 0px;
+        padding-right: 0px;
     }
 
-    #skills .container {
-        margin-left: 0;
-        justify-content: center;
+    .blog {
+        padding-left: 50px;
+        padding-right: 30px;
     }
+/* 
+    .projects #project {
+        background-size: cover;
+    } */
 
-    #skills .container .skill {
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    #project h1 {
-        text-align: center;
-        margin-top: 50px;
-        font-size: 1.5rem;
-        /* margin-right: 20px; */
-    }
-
-    #project .box {
-        text-align: center;
-        width: 200px;
-        height: 120px;
-        margin: 0 8px;
-    }
-
-    #project .made {
-        font-size: .8rem;
+    .projects {
+        padding-left: 0px;
+        padding-right: 0px;
     }
 
     .hamburger::before, .hamburger::after, .hamburger input {
@@ -297,7 +290,7 @@ body {
         flex-direction: column;
         align-items: start;
         justify-content: center;
-        background-color: black;
+        background-color: darkslateblue;
         position: absolute;
         top: 0;
     }
@@ -333,9 +326,14 @@ body {
         translate: 0;
         margin: 0;
     }
+
+    footer {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
 }
 
-@media (max-width:380px) {  
+@media (max-width:390px) {  
 
     #skills .container .skill {
         margin-top: 10px;
@@ -362,6 +360,10 @@ body {
 
     #hero .underline {
         width: 100px;
+    }
+
+    .contacts .contact p {
+        font-size: .5rem;
     }
 
 }
