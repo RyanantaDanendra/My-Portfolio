@@ -254,8 +254,12 @@ body {
     }
 
     .blog {
-        padding-left: 50px;
+        padding-left: 30px;
         padding-right: 30px;
+    }
+
+    .blog p {
+        font-size: .8rem;
     }
 /* 
     .projects #project {
@@ -352,18 +356,6 @@ body {
 
     #hero h3 {
         font-size: .8rem;
-    }
-
-    #hero svg {
-        font-size: .8rem;
-    }
-
-    #hero .underline {
-        width: 100px;
-    }
-
-    .contacts .contact p {
-        font-size: .5rem;
     }
 
 }

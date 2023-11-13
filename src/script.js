@@ -14,30 +14,39 @@ function toggleDarkMode() {
 
 const projects = document.querySelectorAll('.project');
 const overlays = document.querySelectorAll('.overlay');
-// a.innerHTML = 'Click to see ';
-// const p = document.createElement('p');
 const hrefs = [
     "https://ryanantadanendra.github.io/",
     "https://dev-ryanantaswordpress.pantheonsite.io/",
 ]
 
+const madeWith = [
+    "Made with HTML, CSS, and JS",
+    "Made with Wordpress",
+]
+const a = document.createElement('a')
+const p = document.createElement('p')
+
 projects.forEach((project, i) => {
     project.addEventListener('mouseover', function() {
-        // overlays[i].appendChild(p);
-        // overlays[i].appendChild(a);
-        overlays[i].innerHTML = ''
-        overlays[i].innerHTML = `
-                                    <p>Made with HTML, CSS, AND JS</p>
-                                    <a href=${hrefs[i]}>Click to see!</a>
-                                `;
-        // a.href = hrefs[i];
+        overlays[i].appendChild(p);
+        overlays[i].appendChild(a);
+        overlays[i].style.transition = 'width 2s, height 2s';
+        overlays[i].style.transitionTimingFunction = 'ease-out';
+
+        a.textContent = "Click to see";
+        a.href = hrefs[i];
+        p.textContent = madeWith[i];
+
         // p.innerHTML = "Made with html, css, and Javascript";
         overlays[i].style.display = 'flex';
         overlays[i].style.flexDirection = 'column';
-        overlays[i].style.transition = 'all 2s';
+        overlays[i].style.transition = 'opacity 0.5s ease-out';
+
     });
     
     project.addEventListener('mouseout', function() {
         overlays[i].style.display = 'none';
     })
+
+    
 })
