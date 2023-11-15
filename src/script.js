@@ -50,3 +50,39 @@ projects.forEach((project, i) => {
 
     
 })
+
+const audio = document.getElementById('audio');
+// const play = document.getElementById('playButton');
+let isPlaying = localStorage.getItem('isPlaying') || true;
+let currentTime = localStorage.getItem('currentTime') || 0;
+
+if(isPlaying) {
+    audio.play()
+    audio.currentTime = currentTime
+    console.log(currentTime)
+    if(document.getElementById('playButton')){
+        document.getElementById('playButton').textContent = 'Pause Music';
+    }
+}
+
+function audioPlay() {
+    const play = document.getElementById('playButton');
+    if(audio.paused) {
+        audio.play()
+        play.textContent = 'Pause Music'
+        localStorage.setItem('isPlaying', true);
+    } else {
+        audio.pause();
+        play.textContent = 'Play Music'
+        localStorage.setItem('isPlaying', false);
+    }
+
+    localStorage.setItem('isPlaying', !audio.paused);
+}
+
+audio.addEventListener('timeupdate', function () {
+    localStorage.setItem('currentTime', audio.currentTime);
+    currentTime = localStorage.getItem('currentTime');
+    // console.log('Waktu Pemutaran Saat Ini:', currentTime);
+});
+
